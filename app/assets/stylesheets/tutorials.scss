@@ -19,6 +19,7 @@
 	font-size: 5em;
 	color: #646464;
 	margin-bottom: 40px;
+	margin-top: 40px;
 }
 
 @media screen and (max-width: 400px){
@@ -29,6 +30,11 @@
 
 @media screen and (min-width: 400px){
 	.big-links{
-	font-size: 2em;
-}
+		font-size: 2em;
+	}
+
+	.height-space{
+		height: 100px;
+		width: 100%;
+	}
 }
