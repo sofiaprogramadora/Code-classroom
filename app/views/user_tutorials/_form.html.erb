@@ -1,0 +1,57 @@
+<%= form_with(model: user_tutorial, local: true) do |form| %>
+  <% if user_tutorial.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_tutorial.errors.count, "error") %> prohibited this user_tutorial from being saved:</h2>
+
+      <ul>
+      <% user_tutorial.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :user_tutorial_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goal %>
+    <%= form.text_area :goal, id: :user_tutorial_goal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :user_tutorial_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_area :code, id: :user_tutorial_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :files %>
+    <%= form.text_field :files, id: :user_tutorial_files %>
+  </div>
+
+  <div class="field">
+    <%= form.label :images %>
+    <%= form.text_field :images, id: :user_tutorial_images %>
+  </div>
+
+  <div class="field">
+    <%= form.label :embed %>
+    <%= form.text_field :embed, id: :user_tutorial_embed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :language %>
+    <%= select_tag :language, options_from_collection_for_select(@langs, "to_s", "to_s" ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

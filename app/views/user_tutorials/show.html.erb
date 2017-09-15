@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user_tutorial.name %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @user_tutorial.language %>
+</p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @user_tutorial.goal %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @user_tutorial.content %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @user_tutorial.code %>
+</p>
+
+<p>
+  <strong>Files:</strong>
+  <%= @user_tutorial.files %>
+</p>
+
+<p>
+  <strong>Images:</strong>
+  <%= @user_tutorial.images %>
+</p>
+
+<p>
+  <strong>Embed:</strong>
+  <%= @user_tutorial.embed %>
+</p>
+
+<%= link_to 'Edit', edit_user_tutorial_path(@user_tutorial) %> |
+<%= link_to 'Back', user_tutorials_path %>
