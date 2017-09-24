@@ -1,4 +1,31 @@
 Rails.application.routes.draw do
+  get 'c/Main'
+
+  get 'batch/Main'
+
+  get 'basic/Main'
+
+  get 'bash/Main'
+
+  get 'assembly/Main'
+
+  get 'apple_script/Main'
+
+  get 'css_tutorial/p1_1'
+
+  get 'css_tutorial/p1_2'
+
+  get 'css_tutorial/p1_3'
+
+  get 'css_tutorial/p1_4'
+
+  get 'css_tutorial/p1_5'
+
+  get 'css_tutorial/test1'
+
+  get 'posts/bash_9_very_useful_commands'
+
+  resources :tutorial_maker_admins
   resources :user_tutorials
   devise_for :users
   get 'tutorials/MainMenu'

@@ -52,3 +52,15 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+
+
+config.after_initialize do
+  #Enable bullet in your application
+  Bullet.enable = true
+end
+
+Bullet.alert = true
+Bullet.console = true
+Bullet.rails_logger = true
+Bullet.bullet_logger = true
+Bullet.growl = true
