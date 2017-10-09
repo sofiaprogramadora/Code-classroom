@@ -1,0 +1,2 @@
+module RustHelper
+end

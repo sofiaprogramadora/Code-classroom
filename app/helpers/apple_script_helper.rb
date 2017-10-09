@@ -1,0 +1,2 @@
+module AppleScriptHelper
+end

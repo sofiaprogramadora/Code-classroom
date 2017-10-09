@@ -16,9 +16,9 @@
       <tr>
         <td><%= user_tutorial.name %></td>
         <td><%= user_tutorial.language %></td>
-        <td><%= link_to 'Show', user_tutorial %></td>
-        <td><%= link_to 'Edit', edit_user_tutorial_path(user_tutorial) %></td>
-        <td><%= link_to 'Destroy', user_tutorial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user_tutorial if can? :read, UserTutorial %></td>
+        <td><%= link_to 'Edit', edit_user_tutorial_path(user_tutorial) if can? :update, UserTutorial %></td>
+        <td><%= link_to 'Destroy', user_tutorial, method: :delete, data: { confirm: 'Are you sure?' } if current_user.has_role? :destroy %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,6 +26,6 @@
 
 <br>
 
-<%= link_to 'New User Tutorial', new_user_tutorial_path %>
+<%= link_to 'New Tutorial', new_user_tutorial_path if current_user.current_role == :admin || current_user.current_role == :normal %>
 
-
+<%= current_user.roles %>

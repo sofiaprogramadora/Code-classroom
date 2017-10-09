@@ -5,8 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-gem "devise", git: 'https://github.com/plataformatec/devise.git'
+gem 'rollbar'
+gem 'rolify'
+gem 'carrierwave', '~> 1.0'
 # jquery
 gem 'jquery-rails'
 gem 'better_errors'
@@ -22,7 +23,11 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'chartkick'
+gem 'activeadmin', github: 'activeadmin'
+gem 'formtastic'
+gem "devise", git: 'https://github.com/plataformatec/devise.git'
+gem 'cancancan', '~> 1.10'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -52,6 +57,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'uniform_notifier'
   gem 'bullet'
 end
 

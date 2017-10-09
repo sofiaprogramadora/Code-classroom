@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tutorial_maker_admin.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @tutorial_maker_admin.content %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @tutorial_maker_admin.code %>
+</p>
+
+<% if can? :update, @tutorial_maker_admin %>
+<%= link_to 'Edit', edit_tutorial_maker_admin_path(@tutorial_maker_admin) %>
+<% end %> |
+<%= link_to 'Back', tutorial_maker_admins_path %>

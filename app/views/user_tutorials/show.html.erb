@@ -2,7 +2,7 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @user_tutorial.name %>
+  <h1><%= @user_tutorial.name %></h1>
 </p>
 
 <p>
@@ -27,17 +27,15 @@
 
 <p>
   <strong>Files:</strong>
-  <%= @user_tutorial.files %>
+  <a href="<%= @user_tutorial.files if @user_tutorial.files? %>">Download Files</a>
 </p>
 
 <p>
   <strong>Images:</strong>
-  <%= @user_tutorial.images %>
-</p>
-
+    <%= image_tag(@user_tutorial.image.url, alt: 'Image') if @user_tutorial.image? %>
 <p>
-  <strong>Embed:</strong>
-  <%= @user_tutorial.embed %>
+  <strong>User:</strong>
+  <%= @user_tutorial.user.email %>
 </p>
 
 <%= link_to 'Edit', edit_user_tutorial_path(@user_tutorial) %> |

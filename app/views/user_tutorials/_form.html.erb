@@ -33,22 +33,16 @@
 
   <div class="field">
     <%= form.label :files %>
-    <%= form.text_field :files, id: :user_tutorial_files %>
+    <%= form.file_field :files, id: :user_tutorial_files %>
   </div>
 
-  <div class="field">
-    <%= form.label :images %>
-    <%= form.text_field :images, id: :user_tutorial_images %>
-  </div>
-
-  <div class="field">
-    <%= form.label :embed %>
-    <%= form.text_field :embed, id: :user_tutorial_embed %>
+  <div class="field ">
+    <%= form.label :image %>
+    <%= form.file_field :image, id: :user_tutorial_image %>
   </div>
 
   <div class="field">
     <%= form.label :language %>
-    <%= select_tag :language, options_from_collection_for_select(@langs, "to_s", "to_s" ) %>
   </div>
 
   <div class="actions">

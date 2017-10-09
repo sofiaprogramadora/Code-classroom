@@ -1,0 +1,10 @@
+.key{
+	/*you can change this settings*/
+	background-color: #ddd;
+	box-shadow: 3px 3px #555;
+	border-radius: 5% 5% 5% 25%;
+	color: #585858;
+	}
+.key-ctrl {
+	}
+.pressed-hover{}

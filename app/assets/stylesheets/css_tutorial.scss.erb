@@ -1,0 +1,115 @@
+// Place all the styles related to the Css_tutorial controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.circle{
+	background: #FF6C00;
+	border: 3px solid #FFBB08;
+	border-radius: 100%;
+	width: 60px;
+	height: 60px;
+}
+
+.circle .circle-down{
+	position: relative;
+	display: none;
+}
+
+.circle:hover{
+	.circle-down{
+		display: inline;
+		down: 40px;
+		background-color: #666666;
+		color: white;
+	}
+}
+
+@media screen and (min-width: 900px){
+	.hover-touch::after{
+		content: 'Hover around the small circles to see tips before starting';
+	}
+}
+
+@media screen and (max-width: 900px){
+	.hover-touch::after{
+		content: 'Touch the small circles to see tips before starting';
+	}
+}
+
+@keyframes animate{
+	10%{
+		background-image: url("<%= asset_path 'Bash_logo.png' %>")
+	}
+	20%{
+		background-image: url("<%= asset_path 'Ruby_logo.png' %>")
+	}
+	30%{
+		background-image: url("<%= asset_path 'C_logo.png' %>")
+	}
+	40%{
+		background-image: url("<%= asset_path 'Cpp_logo.png' %>")
+	}
+	50%{
+		background-image: url("<%= asset_path 'Batch_logo.png' %>")
+	}
+	60%{
+		background-image: url("<%= asset_path 'Dart_logo.png' %>")
+	}
+	70%{
+		background-image: url("<%= asset_path 'Fortran_logo.png' %>")
+	}
+	80%{
+		background-image: url("<%= asset_path 'HTML_logo.png' %>")
+	}
+	90%{
+		background-image: url("<%= asset_path 'Python_logo.png' %>")
+	}
+	100%{
+		background-image: url("<%= asset_path 'AppleScript_logo.png' %>")
+	}
+}
+
+
+@keyframes ascii_animation{
+	10%{
+		content: '__'
+	}
+	20%{
+		content: '__|-'
+	}
+	30%{
+		content: '__|--|~'
+	}
+	40%{
+		content: '__|--|~·'
+	}
+	50%{
+		content: '__|--|~·|'
+	}
+	60%{
+		content: '__|--|'
+	}
+	70%{
+		content: '__|-'
+	}
+	80%{
+		content: '__|'
+	}
+	90%{
+		content: '__'
+	}
+	100%{
+		content: '_'
+	}
+}
+.animation{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	animation: 5s infinite animate;
+	width: 50px;
+	height: 60px;
+}
+
+.ascii-animation::before{
+	animation: 7s infinite ascii_animation;
+}

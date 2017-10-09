@@ -1,0 +1,73 @@
+<table>
+	<thead>
+	<tr>
+		<th>What</th>
+		<th>Code</th>
+		<th>Example</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>variable declaration:</td>
+		<td><-</td>
+		<td>var <- 3</td>
+	</tr>
+	</tbody>
+</table>
+
+<style>
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #FBFBFB; }
+th {
+  background: #00B14A;
+  color: white;
+  font-weight: bold;
+}
+td, th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		border: none;
+		position: relative;
+		padding-left: 50%;
+	}
+	td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	td:nth-of-type(1):before { content: "What"; }
+	td:nth-of-type(2):before { content: "Code"; }
+	td:nth-of-type(3):before { content: "Example"; }
+}
+</style>

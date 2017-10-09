@@ -4,6 +4,7 @@ class UserTutorialsController < ApplicationController
   # GET /user_tutorials
   # GET /user_tutorials.json
   def index
+    @creator = current_user
     @user_tutorials = UserTutorial.all
     @langs = ["CSS", "HTML"]
   end
@@ -11,22 +12,29 @@ class UserTutorialsController < ApplicationController
   # GET /user_tutorials/1
   # GET /user_tutorials/1.json
   def show
+    @creator = current_user
+    @langs = ["CSS", "HTML"]
   end
 
   # GET /user_tutorials/new
   def new
+    @creator = current_user
     @user_tutorial = UserTutorial.new
     @langs = [:CSS, :HTML]
   end
 
   # GET /user_tutorials/1/edit
   def edit
+    @creator = current_user
+    @langs = ["CSS", "HTML"]
   end
 
   # POST /user_tutorials
   # POST /user_tutorials.json
   def create
+    @creator = current_user.id
     @user_tutorial = UserTutorial.new(user_tutorial_params)
+    @user_tutorial.user_id = @creator
 
     respond_to do |format|
       if @user_tutorial.save
@@ -71,6 +79,6 @@ class UserTutorialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_tutorial_params
-      params.require(:user_tutorial).permit(:name, :language, :goal, :content, :code, :files, :images, :embed)
+      params.require(:user_tutorial).permit(:name, :language, :goal, :content, :code, :files, :images, :zip)
     end
 end

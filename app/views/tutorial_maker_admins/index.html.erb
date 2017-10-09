@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tutorial Maker Admins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th>Code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tutorial_maker_admins.each do |tutorial_maker_admin| %>
+      <tr>
+        <td><%= tutorial_maker_admin.name %></td>
+        <td><%= tutorial_maker_admin.content %></td>
+        <td><%= tutorial_maker_admin.code %></td>
+        <td><%= link_to 'Show', tutorial_maker_admin %></td>
+        <td><%= link_to 'Edit', edit_tutorial_maker_admin_path(tutorial_maker_admin) %></td>
+        <td><%= link_to 'Destroy', tutorial_maker_admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tutorial Maker Admin', new_tutorial_maker_admin_path %>

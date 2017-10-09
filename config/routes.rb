@@ -1,4 +1,57 @@
 Rails.application.routes.draw do
+
+  get 'ruby/main'
+
+  get 'ruby/c1p1'
+
+  get 'pdfs/ruby_1'
+
+  get 'pdfs/main'
+
+  get 'pdfs/ruby'
+
+  get 'pdfs/php'
+
+  get 'dart/index'
+
+  get 'dart/final_test'
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  get 'rust/Main'
+
+  get 'r/Main'
+
+  get 'python/Main'
+
+  get 'php/Main'
+
+  get 'perl/Main'
+
+  get 'node_js/Main'
+
+  get 'live_script/Main'
+
+  get 'pug_js/Main'
+
+  get 'js/Main'
+
+  get 'java/Main'
+
+  get 'html/Main'
+
+  get 'gosu_ruby/Main'
+
+  get 'go/Main'
+
+  get 'fortran/Main'
+
+  get 'css/Main'
+
+  get 'cpp/Main'
+
+  get 'cs/Main'
+
   get 'c/Main'
 
   get 'batch/Main'
@@ -28,6 +81,7 @@ Rails.application.routes.draw do
   resources :tutorial_maker_admins
   resources :user_tutorials
   devise_for :users
+
   get 'tutorials/MainMenu'
 
   get 'tutorials/AppleScript'
@@ -118,5 +172,20 @@ Rails.application.routes.draw do
 
   root 'main#index'
 
+  get 'posts/google_langs_post_tutorials'
+
+  get 'pug_js/c1p1'
+
+  get 'pug_js/test1'
+
+  get 'pdfs/php_1'
+
+  get 'php/test1'
+
+  get 'r/c1p1'
+
+  get 'r/cheatsheet'
+
+  get 'r/test1'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -15,3 +15,4 @@ Rails.application.config.assets.precompile += %w( *.jpg *.png *.gif *.ttf *.otf 
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'fonts')
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'js')
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'css')
+Rails.application.config.assets.precompile += %w( Chart.bundle.js )
