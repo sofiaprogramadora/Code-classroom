@@ -47,7 +47,7 @@ class User < ApplicationRecord
   end
 
   def admin?
-    has_role?(:admin)
+    self.role == "admin"
   end
 
   def roles_mask=()

@@ -15,7 +15,20 @@
   <%= @tutorial_maker_admin.code %>
 </p>
 
-<% if can? :update, @tutorial_maker_admin %>
-<%= link_to 'Edit', edit_tutorial_maker_admin_path(@tutorial_maker_admin) %>
-<% end %> |
+<p>
+  <strong>Files:</strong>
+  <%= @tutorial_maker_admin.file %>
+</p>
+
+<p>
+  <strong>Images:</strong>
+  <%= @tutorial_maker_admin.image %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @tutorial_maker_admin.language %>
+</p>
+
+<%= link_to 'Edit', edit_tutorial_maker_admin_path(@tutorial_maker_admin) if current_user.admin? %> |
 <%= link_to 'Back', tutorial_maker_admins_path %>

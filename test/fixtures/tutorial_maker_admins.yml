@@ -4,8 +4,14 @@ one:
   name: MyString
   content: MyText
   code: MyText
+  file: MyString
+  image: MyString
+  language: MyString
 
 two:
   name: MyString
   content: MyText
   code: MyText
+  file: MyString
+  image: MyString
+  language: MyString

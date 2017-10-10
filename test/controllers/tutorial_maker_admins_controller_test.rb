@@ -17,7 +17,7 @@ class TutorialMakerAdminsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create tutorial_maker_admin" do
     assert_difference('TutorialMakerAdmin.count') do
-      post tutorial_maker_admins_url, params: { tutorial_maker_admin: { code: @tutorial_maker_admin.code, content: @tutorial_maker_admin.content, name: @tutorial_maker_admin.name } }
+      post tutorial_maker_admins_url, params: { tutorial_maker_admin: { code: @tutorial_maker_admin.code, content: @tutorial_maker_admin.content, file: @tutorial_maker_admin.file, image: @tutorial_maker_admin.image, language: @tutorial_maker_admin.language, name: @tutorial_maker_admin.name } }
     end
 
     assert_redirected_to tutorial_maker_admin_url(TutorialMakerAdmin.last)
@@ -34,7 +34,7 @@ class TutorialMakerAdminsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update tutorial_maker_admin" do
-    patch tutorial_maker_admin_url(@tutorial_maker_admin), params: { tutorial_maker_admin: { code: @tutorial_maker_admin.code, content: @tutorial_maker_admin.content, name: @tutorial_maker_admin.name } }
+    patch tutorial_maker_admin_url(@tutorial_maker_admin), params: { tutorial_maker_admin: { code: @tutorial_maker_admin.code, content: @tutorial_maker_admin.content, file: @tutorial_maker_admin.file, image: @tutorial_maker_admin.image, language: @tutorial_maker_admin.language, name: @tutorial_maker_admin.name } }
     assert_redirected_to tutorial_maker_admin_url(@tutorial_maker_admin)
   end
 

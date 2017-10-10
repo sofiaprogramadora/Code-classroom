@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tutorial_maker_admins
   root 'main#index'
 
         get 'main/index'
@@ -172,7 +173,6 @@ Rails.application.routes.draw do
 
   get 'user_tutorials/ajax'
 
-  resources :tutorial_maker_admins
   resources :user_tutorials
   devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
 

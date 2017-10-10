@@ -1,3 +1,4 @@
+<% if current_user.admin? %>
 <%= form_with(model: tutorial_maker_admin, local: true) do |form| %>
   <% if tutorial_maker_admin.errors.any? %>
     <div id="error_explanation">
@@ -26,7 +27,24 @@
     <%= form.text_area :code, id: :tutorial_maker_admin_code %>
   </div>
 
+  <div class="field">
+    <%= form.label :file %>
+    <%= form.text_field :file, id: :tutorial_maker_admin_file %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :tutorial_maker_admin_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :language %>
+    <%= form.text_field :language, id: :tutorial_maker_admin_language %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+<% end %>
+
 <% end %>
