@@ -78,9 +78,17 @@ Rails.application.routes.draw do
 
   get 'posts/bash_9_very_useful_commands'
 
+  get 'user_tutorials/ajax'
+
   resources :tutorial_maker_admins
   resources :user_tutorials
   devise_for :users
+
+  #resources :tutorials, only: [] do
+  #  collection do
+  #    get 'MainMenu'
+  #  end
+  #end
 
   get 'tutorials/MainMenu'
 
@@ -187,5 +195,6 @@ Rails.application.routes.draw do
   get 'r/cheatsheet'
 
   get 'r/test1'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

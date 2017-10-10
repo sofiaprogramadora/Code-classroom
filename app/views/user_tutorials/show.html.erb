@@ -33,6 +33,7 @@
 <p>
   <strong>Images:</strong>
     <%= image_tag(@user_tutorial.image.url, alt: 'Image') if @user_tutorial.image? %>
+      <%= @user_tutorial.image if @user_tutorial.image? %>
 <p>
   <strong>User:</strong>
   <%= @user_tutorial.user.email %>

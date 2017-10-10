@@ -1,4 +1,4 @@
-<%= form_with(model: user_tutorial, local: true) do |form| %>
+<%= form_with(model: user_tutorial, local:true) do |form| %>
   <% if user_tutorial.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user_tutorial.errors.count, "error") %> prohibited this user_tutorial from being saved:</h2>

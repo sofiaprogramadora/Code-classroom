@@ -1,6 +1,10 @@
 class UserTutorialsController < ApplicationController
   before_action :set_user_tutorial, only: [:show, :edit, :update, :destroy]
 
+  def ajax
+    UserTutorial.create(name: 'Demo Tutorial', user: User.first)
+  end
+
   # GET /user_tutorials
   # GET /user_tutorials.json
   def index
