@@ -112,13 +112,6 @@ Rails.application.routes.draw do
     end
   end
 
-
-
-
-
-
-
-
   get 'ruby/main'
 
   get 'ruby/c1p1'
@@ -215,6 +208,3 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
-
-  resources :tutorials, only: [] do
-    collection do
