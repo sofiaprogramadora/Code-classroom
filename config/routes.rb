@@ -1,16 +1,129 @@
 Rails.application.routes.draw do
 
+  root 'main#index'
+
+  resources :main, only: [] do
+    collection do
+
+        get 'index'
+
+        get 'trending'
+
+        get 'tutorials'
+
+        get 'download'
+
+        get 'contact'
+
+        get 'popular'
+
+        get 'alsoVisit'
+
+        get 'explore'
+
+        get 'about'
+
+        get 'suggestions'
+
+        get 'help'
+
+        get 'share'
+    end
+  end
+
+  resources :pdfs, only: [] do
+    collection do
+      get 'ruby_1'
+
+      get 'main'
+
+      get 'ruby'
+
+      get 'php'
+    end
+  end
+
+
+  resources :tutorials, only: [] do
+    collection do
+    get 'MainMenu'
+
+    get 'AppleScript'
+
+    get 'Assembly'
+
+    get 'Bash'
+
+    get 'Basic'
+
+    get 'Batch'
+
+    get 'C'
+
+    get 'CS'
+
+    get 'CPP'
+
+    get 'CSS'
+
+    get 'Dart'
+
+    get 'Fortran'
+
+    get 'Go'
+
+    get 'GosuRuby'
+
+    get 'HTML'
+
+    get 'Java'
+
+    get 'JS'
+
+    get 'JadePugJS'
+
+    get 'LiveScript'
+
+    get 'NodeJS'
+
+    get 'Perl'
+
+    get 'PHP'
+
+    get 'Python'
+
+    get 'R'
+
+    get 'Rust'
+
+    get 'Ruby'
+
+    get 'Rails'
+
+    get 'Sass'
+
+    get 'SmallTalk'
+
+    get 'Unity'
+
+    get 'Sass'
+
+    get 'Less'
+    end
+  end
+
+
+
+
+
+
+
+
   get 'ruby/main'
 
   get 'ruby/c1p1'
 
-  get 'pdfs/ruby_1'
 
-  get 'pdfs/main'
-
-  get 'pdfs/ruby'
-
-  get 'pdfs/php'
 
   get 'dart/index'
 
@@ -82,103 +195,7 @@ Rails.application.routes.draw do
 
   resources :tutorial_maker_admins
   resources :user_tutorials
-  devise_for :users
-
-  #resources :tutorials, only: [] do
-  #  collection do
-  #    get 'MainMenu'
-  #  end
-  #end
-
-  get 'tutorials/MainMenu'
-
-  get 'tutorials/AppleScript'
-
-  get 'tutorials/Assembly'
-
-  get 'tutorials/Bash'
-
-  get 'tutorials/Basic'
-
-  get 'tutorials/Batch'
-
-  get 'tutorials/C'
-
-  get 'tutorials/CS'
-
-  get 'tutorials/CPP'
-
-  get 'tutorials/CSS'
-
-  get 'tutorials/Dart'
-
-  get 'tutorials/Fortran'
-
-  get 'tutorials/Go'
-
-  get 'tutorials/GosuRuby'
-
-  get 'tutorials/HTML'
-
-  get 'tutorials/Java'
-
-  get 'tutorials/JS'
-
-  get 'tutorials/JadePugJS'
-
-  get 'tutorials/LiveScript'
-
-  get 'tutorials/NodeJS'
-
-  get 'tutorials/Perl'
-
-  get 'tutorials/PHP'
-
-  get 'tutorials/Python'
-
-  get 'tutorials/R'
-
-  get 'tutorials/Rust'
-
-  get 'tutorials/Ruby'
-
-  get 'tutorials/Rails'
-
-  get 'tutorials/Sass'
-
-  get 'tutorials/SmallTalk'
-
-  get 'tutorials/Unity'
-
-  get 'tutorials/Sass'
-
-  get 'tutorials/Less'
-
-  get 'main/index'
-
-  get 'main/trending'
-
-  get 'main/tutorials'
-
-  get 'main/download'
-
-  get 'main/contact'
-
-  get 'main/popular'
-
-  get 'main/alsoVisit'
-
-  get 'main/explore'
-
-  get 'main/about'
-
-  get 'main/suggestions'
-
-  get 'main/help'
-
-  get 'main/share'
-
-  root 'main#index'
+  devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
 
   get 'posts/google_langs_post_tutorials'
 
@@ -198,3 +215,6 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
+  resources :tutorials, only: [] do
+    collection do

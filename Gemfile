@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'binding_of_caller'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
 gem 'faker'
 gem 'rollbar'
 gem 'rolify'
@@ -39,7 +42,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'groupdate'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -49,6 +52,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'dotenv-rails'
 end
 
 group :development do

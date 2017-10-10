@@ -7,9 +7,23 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 
   ROLES = %i[admin normal guest]
+
+  def self.from_omniauth(access_token)
+    data = access_token.info
+    user = User.where(email: data['email']).first
+
+    # Uncomment the section below if you want users to be created if they don't exist
+    # unless user
+    #     user = User.create(name: data['name'],
+    #        email: data['email'],
+    #        password: Devise.friendly_token[0,20]
+    #     )
+    # end
+    user
+  end
 
   def roles=(roles)
     roles = [*roles].map { |r| r.to_sym }
@@ -37,5 +51,19 @@ class User < ApplicationRecord
   end
 
   def roles_mask=()
+  end
+
+  def self.find_for_google_oauth(auth)
+    user = User.where(provider: auth.provider, uid: auth.uid).first
+    # The User was found in our database
+    return user if user
+    # Check if the User is already registered without Google
+    user = User.where(email: auth.info.email).first
+    return user if user
+    User.create(
+    name: auth.extra.raw_info.name,
+    provider: auth.provider, uid: auth.uid,
+    email: auth.info.email,
+    password: Devise.friendly_token[0,20])
   end
 end

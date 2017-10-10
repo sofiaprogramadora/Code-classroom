@@ -9,7 +9,7 @@ class UserTutorialsController < ApplicationController
   # GET /user_tutorials.json
   def index
     @creator = current_user
-    @user_tutorials = UserTutorial.all
+    @user_tutorials = UserTutorial.includes(:user)
     @langs = ["CSS", "HTML"]
   end
 
@@ -83,6 +83,6 @@ class UserTutorialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_tutorial_params
-      params.require(:user_tutorial).permit(:name, :language, :goal, :content, :code, :files, :images, :zip)
+      params.require(:user_tutorial).permit(:name, :language, :goal, :content, :code, :files, :image, :zip)
     end
 end

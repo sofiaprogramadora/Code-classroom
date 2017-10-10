@@ -29,5 +29,14 @@ ActiveAdmin.register_page "Dashboard" do
     #     end
     #   end
     # end
+
+      columns do
+        column do
+          panel 'Tutoriales por persona' do
+            datos = UserTutorial.group_by_week(:created_at).count
+            render 'chart', datos: datos
+          end
+        end
+      end
   end # content
 end

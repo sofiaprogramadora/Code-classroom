@@ -15,10 +15,21 @@
     <% @user_tutorials.each do |user_tutorial| %>
       <tr>
         <td><%= user_tutorial.name %></td>
+
         <td><%= user_tutorial.language %></td>
-        <td><%= link_to 'Show', user_tutorial if can? :read, UserTutorial %></td>
-        <td><%= link_to 'Edit', edit_user_tutorial_path(user_tutorial) if can? :update, UserTutorial %></td>
-        <td><%= link_to 'Destroy', user_tutorial, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, :all %></td>
+        <% if can? :read, user_tutorial %>
+          <td><%= link_to 'Show', user_tutorial %></td>
+        <% end %>
+
+        <% if can? :update, user_tutorial %>
+          <td><%= link_to 'Edit', edit_user_tutorial_path(user_tutorial) %></td>
+        <% end %>
+
+        <% if can? :destroy, user_tutorial  %>
+        <td><%= link_to 'Destroy', user_tutorial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+
+        <td> <%= user_tutorial.user.try(:email) %> </td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +47,4 @@
 
 <%= link_to 'Ajax Post', new_user_tutorial_path, data:{remote: true} if current_user.nil? == false %>
 
-<%= link_to("New Demo Tutorial", user_tutorials_ajax_path , data:{remote: true}) %>
+<%= link_to("New Demo Tutorial", user_tutorials_ajax_path , data:{remote: true}) %><

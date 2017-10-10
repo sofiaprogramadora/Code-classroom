@@ -95,7 +95,7 @@ Devise.setup do |config|
   # requires the Devise mappings to be loaded during boot time the application
   # won't boot properly.
   # config.reload_routes = true
-
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], {}
   # ==> Configuration for :database_authenticatable
   # For bcrypt, this is the cost for hashing the password and defaults to 11. If
   # using other algorithms, it sets how many times you want the password to be hashed.
