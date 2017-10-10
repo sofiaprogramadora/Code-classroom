@@ -83,6 +83,6 @@ class UserTutorialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_tutorial_params
-      params.require(:user_tutorial).permit(:name, :language, :goal, :content, :code, :files, :image, :zip)
+      params.require(:user_tutorial).permit(:name, :language, :goal, :content, :code, :files, :image)
     end
 end
