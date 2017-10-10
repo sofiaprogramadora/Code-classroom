@@ -17,12 +17,12 @@
 
 <p>
   <strong>Files:</strong>
-  <%= @tutorial_maker_admin.file %>
+  <a href="<%= @tutorial_maker_admin if @tutorial_maker_admin.file? %>">Download Files</a>
 </p>
 
 <p>
-  <strong>Images:</strong>
-  <%= @tutorial_maker_admin.image %>
+    <%= image_tag(@tutorial_maker_admin.image.url, alt: 'Image') if @tutorial_maker_admin.image? %>
+      <%= @tutorial_maker_admin.image if @tutorial_maker_admin.image? %>
 </p>
 
 <p>
