@@ -2,115 +2,101 @@ Rails.application.routes.draw do
 
   root 'main#index'
 
-  resources :main, only: [] do
-    collection do
+        get 'main/index'
 
-        get 'index'
+        get 'main/trending'
 
-        get 'trending'
+        get 'main/tutorials'
 
-        get 'tutorials'
+        get 'main/download'
 
-        get 'download'
+        get 'main/contact'
 
-        get 'contact'
+        get 'main/popular'
 
-        get 'popular'
+        get 'main/alsoVisit'
 
-        get 'alsoVisit'
+        get 'main/explore'
 
-        get 'explore'
+        get 'main/about'
 
-        get 'about'
+        get 'main/suggestions'
 
-        get 'suggestions'
+        get 'main/help'
 
-        get 'help'
+        get 'main/share'
 
-        get 'share'
-    end
-  end
+      get 'pdfs/ruby_1'
 
-  resources :pdfs, only: [] do
-    collection do
-      get 'ruby_1'
+      get 'pdfs/main'
 
-      get 'main'
+      get 'pdfs/ruby'
 
-      get 'ruby'
+      get 'pdfs/php'
 
-      get 'php'
-    end
-  end
+    get 'tutorials/MainMenu'
 
+    get 'tutorials/AppleScript'
 
-  resources :tutorials, only: [] do
-    collection do
-    get 'MainMenu'
+    get 'tutorials/Assembly'
 
-    get 'AppleScript'
+    get 'tutorials/Bash'
 
-    get 'Assembly'
+    get 'tutorials/Basic'
 
-    get 'Bash'
+    get 'tutorials/Batch'
 
-    get 'Basic'
+    get 'tutorials/C'
 
-    get 'Batch'
+    get 'tutorials/CS'
 
-    get 'C'
+    get 'tutorials/CPP'
 
-    get 'CS'
+    get 'tutorials/CSS'
 
-    get 'CPP'
+    get 'tutorials/Dart'
 
-    get 'CSS'
+    get 'tutorials/Fortran'
 
-    get 'Dart'
+    get 'tutorials/Go'
 
-    get 'Fortran'
+    get 'tutorials/GosuRuby'
 
-    get 'Go'
+    get 'tutorials/HTML'
 
-    get 'GosuRuby'
+    get 'tutorials/Java'
 
-    get 'HTML'
+    get 'tutorials/JS'
 
-    get 'Java'
+    get 'tutorials/JadePugJS'
 
-    get 'JS'
+    get 'tutorials/LiveScript'
 
-    get 'JadePugJS'
+    get 'tutorials/NodeJS'
 
-    get 'LiveScript'
+    get 'tutorials/Perl'
 
-    get 'NodeJS'
+    get 'tutorials/PHP'
 
-    get 'Perl'
+    get 'tutorials/Python'
 
-    get 'PHP'
+    get 'tutorials/R'
 
-    get 'Python'
+    get 'tutorials/Rust'
 
-    get 'R'
+    get 'tutorials/Ruby'
 
-    get 'Rust'
+    get 'tutorials/Rails'
 
-    get 'Ruby'
+    get 'tutorials/Sass'
 
-    get 'Rails'
+    get 'tutorials/SmallTalk'
 
-    get 'Sass'
+    get 'tutorials/Unity'
 
-    get 'SmallTalk'
+    get 'tutorials/Sass'
 
-    get 'Unity'
-
-    get 'Sass'
-
-    get 'Less'
-    end
-  end
+    get 'tutorials/Less'
 
   get 'ruby/main'
 
