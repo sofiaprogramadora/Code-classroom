@@ -1,24 +1,5 @@
-# README
+# Code Classroom
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> A place for everyone to learn
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<a href="codeclassroom.tk">Homepage</a>
