@@ -39,7 +39,6 @@
           </button>
           <a class="navbar-brand" href="<%= root_path %>">Code Classroom</a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
@@ -51,6 +50,18 @@
                 <%= link_to 'Log in', user_session_path %>
               <% end %></li>
           </ul>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<%= pdfs_main_path %>">Pdfs</a></li>
+                <li><a href="<%= main_about_path %>">About</a></li>
+                <li><a href="<%= main_contact_path %>">Contact</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="<%= main_also_visit_path %>">Also visit</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="<%= main_trending_path %>">Treding</a></li>
+              </ul>
+            </li>
           <form class="navbar-form navbar-left">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
