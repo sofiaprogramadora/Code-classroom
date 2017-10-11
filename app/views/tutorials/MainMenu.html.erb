@@ -1,9 +1,14 @@
+<style>
+	.col-md-2{
+		height: 200px;
+	}
+</style>
 <h1 class="center tutorials-h1">Tutorials <img src="<%= asset_path 'Logo.png' %>" alt="" class="logo_page"> </h1>
 
 
 <div class="height-space"></div>
 
-<div class="row col-sm-12">
+<div class="row col-sm-12 max_height">
 	<div class="col-md-2 col-xs-3">
 		<img src="<%= asset_path 'AppleScript_logo.png' %>" alt="" class="logo">
 		<div class="center">
@@ -51,10 +56,6 @@
 		</div>
 		<%# Logo from: https://seeklogo.com/images/C/c-programming-language-logo-9B32D017B1-seeklogo.com.png %>
 	</div>
-</div>
-
-
-<div class="row col-sm-12">
 	<div class="col-md-2 col-xs-3">
 		<img src="<%= asset_path 'CS_logo.png' %>" alt="" class="logo">
 		<div class="center">
@@ -98,10 +99,6 @@
 			<a class="big-links" href="<%= tutorials_Go_path %>" >Go</a>
 		</div>
 	</div>
-</div>
-
-
-<div class="row">
 	<div class="col-md-2 col-xs-3">
 		<img src="<%= asset_path 'Gosu_logo.png' %>" alt="" class="logo">
 		<div class="center">
@@ -149,9 +146,6 @@
 			<a class="big-links" href="<%= tutorials_LiveScript_path %>" >LiveScript</a>
 		</div>
 	</div>
-</div>
-
-<div class="row">
 	<div class="col-md-2 col-xs-3">
 		<img src="<%= asset_path 'Node.js_logo.svg' %>" alt="" class="logo">
 		<div class="center">
@@ -195,9 +189,7 @@
 			</div>
 	<%# Logo from: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png %>
 	</div>
-</div>
 
-<div class="row">
 	<div class="col-md-2 col-xs-3">
 		<img src="<%= asset_path 'Ruby_logo.png' %>" alt="" class="logo">
 		<div class="center">

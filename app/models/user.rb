@@ -50,7 +50,7 @@ class User < ApplicationRecord
     self.role == "admin"
   end
 
-  def roles_mask=()
+  def roles_mask=(a)
   end
 
   def self.find_for_google_oauth(auth)
