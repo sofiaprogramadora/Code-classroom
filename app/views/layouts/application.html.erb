@@ -44,6 +44,8 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="<%= tutorials_MainMenu_path %>">Tutorials<span class="sr-only"></span></a></li>
             <li>
+            <li class="active kids"><a href="<%= kids_main_path %>"><span style="color: red;">K</span><span style="color: blue;">I</span><span style="color: green;">D</span><span style="color: yellow;">S</span><span style="color: purple;">!</span><span class="sr-only"></span></a></li>
+            <li>
               <% if user_signed_in? %>
                 <%= link_to 'Log out', destroy_user_session_path, :method => :delete %>
               <% elsif !user_signed_in? %>
@@ -94,26 +96,5 @@
     <div class="container">
       <%= yield %>
     </div>
-
-  <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : 'your-app-id',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.10'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-    
   </body>
 </html>

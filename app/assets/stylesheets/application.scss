@@ -18,6 +18,8 @@
  *= require_self
  */
 
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
 $white: white;
  #NOTICE{
  	color: red !important;
@@ -52,4 +54,8 @@ nav ul li a{
 .foto-no-margin{
 	padding: 0;
 	margin: 0;
+}
+
+.kids{
+	font-family: 'Gloria Hallelujah', cursive;
 }

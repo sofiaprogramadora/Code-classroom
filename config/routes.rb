@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'kids/html'
+
+  get 'kids/css'
+
+  get 'kids/main'
+
+  get 'kids/javascript'
+
+  get 'kids/python'
+
+  get 'kids/ruby'
+
   resources :tutorial_maker_admins
   root 'main#index'
 
