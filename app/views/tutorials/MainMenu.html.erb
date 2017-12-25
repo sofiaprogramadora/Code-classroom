@@ -1,6 +1,8 @@
 <style>
-	.col-md-2{
-		height: 170px;
+	@media screen and (min-width: 600px) {
+		.col-md-2{
+			height: 170px;
+		}
 	}
 </style>
 <h1 class="center tutorials-h1">Tutorials <img src="<%= asset_path 'Logo.png' %>" alt="" class="logo_page"> </h1>
@@ -19,7 +21,7 @@
 	</div>
 
 	<div class="col-md-2 col-xs-3">
-		<img src="<%= asset_path 'Rust_logo.png' %>" alt="" class="logo">
+		<img src="https://xyne.archlinux.ca/img/arch_linux_programming_language_logos/arch-asm_logo.png" alt="" class="logo">
 		<div class="center">
 			<a class="big-links" href="<%= tutorials_Assembly_path %>" >Assembly</a>
 		</div>
@@ -141,7 +143,7 @@
 	</div>
 
 	<div class="col-md-2 col-xs-3">
-		<img src="<%= asset_path 'Rust_logo.png' %>" alt="" class="logo">
+		<img src="https://avatars3.githubusercontent.com/u/25471216?s=200&v=4" alt="" class="logo">
 		<div class="center">
 			<a class="big-links" href="<%= tutorials_LiveScript_path %>" >LiveScript</a>
 		</div>
