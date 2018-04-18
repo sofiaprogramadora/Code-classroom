@@ -14,6 +14,117 @@
 
 	<div id="firstapp">
 		<h1>Your first app!</h1>
-		<p></p>
+		<p>Hello again! This chapter needs python installed (see <a href="#gs">Getting Started</a>) so if you don't have installed it go install it now. The first thing you should know is that this app will work on the terminal. So for Windows, open cmd, for Linux, open the terminal or CTR + ALT + T. If you are in a Mac, open the Terminal app. On windows open the terminal by opening the cmd shell. see help <a href="here">here</a>. Now, in the terminal (linux, mac), write python3 and press Enter. In Windows CMD, write py and Enter. You will see a python window. In the >> write <code>print("Hello World")</code> and press enter. <br><h1>Congratulations! You just made your first program.</h1><br> 'print()' is a method. The print() prints content to the screen. The text is inside quotes (""). That means it's a string. A string can contain letters. A string is like a phrase or text. You can also print numbers or even boolean values like true and false. We will see this later You just made a string, a phrase of text. But you could also have chosen a number (integer) or a value like true and false. Those last values where boolean values.
+		To enter a numeric value, like any normal number, you enter it without the quotes. You can only enter one number at a time. Try it! <code>print(1000)</code> Should print 1000 to the screen.<code>print(True)</code> shows the value true, most values are true execpt with 0 and false. That means that all other values are true. That will be very helpful later. The false values are important too for an <code>if</code> loop. But True and false are values, "true" and "false" are too. They are different, in quotes, they are strings. But you can create a variable and then use a value, without using the quotes.
+		</p>
 	</div>
+
+	<div id="variables">
+		<h1>Variables</h1>
+		<p>Variables are containers to keep values in. They are like boxes. They have a name and content. Content can be of different types. An example is <code>name = 9</code><br>The value is 9. The value is an integer.
+		A variable has a name too. THe name in this examples was literally name, but names should be descriptive. A name like userValue or user_value is perfect. The first name example is a camel case, meaning that the  next words go in upper case.
+		The other name is ok too, separated by a _ (underscore). So naming is a very important thing. Numbers can NOT be the first character of a variable name. Also, to name a variable you can only use letters (a-z) not incluiding ñ, numbers that can ONLY be from the second character to the end of the name, and you can use underscores (_) and you can't use - or ' or ". You will learn it soon. To print the value of a variable you print it with print too! but instead of writing it name inside of quotes you just write it in the ()s. <code>print(variablename)</code> So you don't need the quotes since we are not refering to a string. If we wanted to print a sum, we wouldn't need the quotes either. That is because we want to print the VALUE, which would return a NUMERIC VALUE. The numeric value is the result to the operation, in this case, the sum. We would write it like this: <code>print(4 + 6)</code>. To substract you do the same. <code>print(6 - 4)</code> and to multiply you do the same: <code>print(4 * 6)</code>, and to divide, well, you do it like this: <code>print(6 / 4)</code> And finally, the values can be any object. o it can be a boolean value (see <a href="#boolean">boolean values</a>), a number, being it a whole number or a decimal, a string, and much more! Even YOU can create your own kinds of objects!(see <a href="#classes">classes</a>)</p>
+
+		<p id="boolean"><h1><a href="#boolean">Boolean Values</a></h1>
+			Boolean values are True and False. They are extremely important when you use If/Else (see <a href="#ifelse">if... or else</a>). The value can ONLY be <code>True</code>(1) or <code>False</code>(0). Don't forget that True is with a capital T and so is false with a capital F.</p>
+
+		<p id="numericvalues"><h1><a href="#numericvalues">Numeric Values (and documentation)</a></h1>
+		Numeric values can vary from whole numbers to decimals. The 3.6 documentation (external) is in <a href="https://docs.python.org/3.6/search.html?q=Numeric&check_keywords=yes&area=default">here</a>. But it may be a little hard to understand the documentation. So I will break it down: IN the documentation there is an explanaincion for different code snippets and methods. THat means that it is a reference. Programmers use it to look for an especific method. Most languages have documentations, not just python. They are some apps to check documentation, but the official Python 3.6 documentation is in <a href="https://docs.python.org/3/">here</a>. The documentation has every method in the standard language so if you don't know what something means search it there.
+		<br><br>
+		Now, numeric values can be numbers, or floats (decimal point numbers) and values with numbers. We can use numeric values for math operations.</p>
+	</div>
+	<div id="strings">
+		<p><h1><a href="#strings">Strings</a></h1>
+			Strings are text objects. If you want to save a string of text you should enter the text between double ("") or single ('') quotes. In between, you put the text. Strings have methods too.
+		</p>
+	</div>
+	<div id="numbermethod"><a href="#numbermethod"><h1>Numbers, and methods!</h1></a>
+	Objects have methods, they are a lot of them. Numbers have a lot of methods, but not all of them look like methods. For instance, adding and substracting, multipliying and dividing, they are all methods. But most methods look like this: <code>object.method()</code> or also like this: <code>method(object)</code> The numeric methods you need to learn are, adding (+), substracting (-), multipliying (*), and division (/). They are all used like this: <code>number method number</code>, so to add it's <code>number + number2</code>. Example: <code>9 + 7</code> Replace the + with the method you chose. <code>5 + 5</code><code>8 - 5</code><code>7 * 5</code><code>5 / 5</code> Also, you can create your own methods! Find out how on the <a href="#methods">metods</a> section.</div>
+	<div id="stringmethod"><h1><a href="#stringmethod"></h1></a>
+	Strings have methods too! Common methods are in <a href="https://docs.python.org/2/library/string.html">here</a> (for python 2)<br>You learned how to read documentation, so go and try to find some methods and try them!</div>
+	<div id="creatingmethods"><h1><a href="#creatingmethods">Creating methods!</a></h1>
+	It's time to create methods! Methods are sets of code that you can repeat later. Methods usually but NOT necessary look like this: <code>method()</code> Inside the parenthesis you add the arguments, which are what we pass to the method. We will be able to acces that values from inside the code. It is like a variable! Lets see how to define one: <br><textarea>def method(args): &#13;&#10;	code()</textarea><br>Lets see this. First, see how the "code()" linue is indented? That means that it is inside the method. <br><textarea rows="5">def method(args): &#13;&#10;	code("I'm inside the method")&#13;&#10;code("I'm outside the method")</textarea><br>The code can be any method, so you use methods to create methods. You can find all these methods that come with python in the documentation.</div>
+
+	<div id="moremethods"><p><h1><a href="#moremethods">More on methods! (And importing)</a></h1>We already covered the basics of methods, but what can we do if we don't know any methods? That is why we will learn some new methods! First, we will learn something called import. There is something we will learn later called <a href="#module">module</a>. A module is a set of methods. You can install modules through something called pip. It is the Python Package Manager. A package is one or more modules. To install pip see <a href="https://pip.pypa.io/en/stable/installing/">this</a><strong>REMEMBER ALWAYS HAVING PERMISSION FROM YOUR PARENTS TO USE THE SUDO COMMAND</strong> But before installing any package please read all the instuctions and cautions. First, instead of installing any package, we will learn how to import a package. to import a package, you have to ways to do it. You either do it like this, which we will call way 1: <code>import * from package</code> or you can import with way 2: <code>import package</code> There are big differences between these two. The first way to do it (way1) is the most especific, you tell python EXACTLY the methods you want. To access the methods we do it like this: <code>method()</code> see how we didn't referenced the name of the module? That is because we only imported THAT methods, all methods. IF you do it in the way 2, we have to reference the module: <code>module.methods()</code> That is because we imported the whole module. So, lets learn how to use a random number! We are using a package called random. Random is a package that will help you generate random numbers. We will use the method randint. To use it you: <br><code>import random</code><br><code>random.randint(0,4)</code><br> What that code does is it generates a random number between 0 and 4. How would that help? Well, we will learn to make a method to return a random string of text.</p></div>
+
+	<div id="listsmethods"><a href="#listsmethods">Lists, and a random string generator!</a>
+	<p>Now, we will learn something called lists. If variables are boxes, lists are like lots of boxes merged together. But lists are variables! it's like you are saving boxes inside of boxes. Why do we need lists? They are very important! Let's learn more aabout it. First, the first value is the value 0. It starts from 0. So, let's see how you create it and how you select a value. <code>a = [3, 4, 5, 3433309]</code> So, the values, 3, 4, 5, and 3433309 are inside the a list. To select 3, you do it like this: <code>a[0]</code> See how the <code>index</code> is 0? It means that we are reffering the FIRST element. How would this help? THink about how we can generate about a random <code>index</code> with <code>randint()</code> and then select the random <code>index</code> and add different strings on the list. So let's make a random index. This assumes that you already imported random so if you didn't do it now. First, let's create a method: <br><textarea>
+		def randomsentence():
+
+		end
+	</textarea><br>
+	Then, we will create a variable. The variable will be an array. The array should be INSIDE the method. But if we want to access the variable from outside the method. The variable will die when the method ends. So if you try to <code>print(array)</code> but you created <code>array</code> inside a method you can't access it outside the method. So a variable called a in the method, is REALLY different. If you create <code>a = 9</code> in the method, then if you ALSO <code>a = "I'm not inside the method"</code> well, not inside the method. If you then (INSIDE THE METHOD) and access it (INSIDE THE METHOD) you will get that the result is 9 and not "I'm not inside the method" So, to get the string, we have to access it outside of the methods. Now, that is because of something called scopes. Scopes are the life of a variable, like the period they are alive, variables that are not inside of anything are in the main scope. We are calling it like that from now own. </p>Now, lets add the array: <br>
+	<textarea>
+		def randomsentence():
+			sentencesArray = ["Hello! This is my program!", "Hi! Are you staying on this program?"]
+		end
+	</textarea><br>
+	Remember to always use a name that describes the variable. Now, lets create a variable, with randint. The variable will be the <code>index</code>. <br>
+	<textarea>
+		def randomsentence():
+			sentencesArray = ["Hello! This is my program!", "Hi! Are you staying on this program?"]
+			indexNumber = random.randint(0, 1)
+		end
+	</textarea><br>
+	If randint cause you errors use <code>randint(0.1)</code>. Why did we write (0, 1) instead of (0, 2) if we need the value to be less than 2. That is because of the <code>index</code> rule, that the first spot on an array is 0. And since we have 2 spots on the array, then the last one will be 1. So, we now have the indexNumber variable. The indexNumber variable is a random number between 0 and 1. Now, we are using that number to return the random string value. <br>
+	<textarea>
+	import random
+	def randomsentence():
+		sentencesArray = ["Hello! This is my program!", "Hi! Are you staying on this program?"]
+		indexNumber = random.randint(0, 1)
+		return sentencesArray[indexNumber]
+	end
+	</textarea><br>
+	Now, test your code! The code will return one of those two strings. Only import random if you didn't before. Try it out! How do you call it? well, we returned the value so then we print it with <code>print()</code>. Finally, we execute our code with: <code>print(randomsentence())</code>
+</div>
+<div id="classes">
+	<p><h1><a href="#classes">Classes!</a></h1>
+	Classes are something we talked about before. They are like molds and the <code>instances</code> are the objects. In Python everything is an object. YOu will learn how to create your own Python class. The link to the documentation on classes is <a href="https://docs.python.org/3/tutorial/classes.html">here.</a> But let's jump into classes! First, to create a class, you use a <code>class</code> keyword. <br>
+	<textarea>
+class ClassName:
+	def __init__():
+
+
+
+
+	</textarea><br>
+
+	See the __init__() method? In the __init__() method you place all the parameters, like the color of the object to create a new object of the class. When you create a class, and an __init__() method, you can call the ClassName() method, which is just the __init__() method but eith the name of the class, you can create a new object! For example, you can <code>object = ClassName()</code> and then access it by: <code>print(object)</code> and it should return something like this: <code></code> That means the object was created. So then, when we get that result, you can now create <strong>methods inside classes!</strong> How can we do that? Think of the class as a big method. It's important to know that you can NOT call <code>instance methods</code> without using the ClassName() (or, the name of your class) method. But can the class itself have methods? Yes! They are called class methods and do not affect any instance. Class methods are usually like, you have the class FunnyString, and want to call something like <code>a = FunnyString()</code>, and then, <code>a.text = FunnyString.generateString</code>, you are applying the last method to a class. Don't forget to use the ()'s for each time you want to create an instance. And now, let's create a method! First, let's think about what class we are going to make. Let's make a class called Dog. It will create dog objects.
+	<textarea>
+class Dog:
+	name = "No name"
+	def __init__(self, name):
+		self.name = name
+		self.yearsOld = 0
+		self.sitted = False
+		self.asleep = False
+	
+	def growOlder(years):
+		yearsOld = yearsOld + years
+	
+	def bark():
+		return "Woof! Woof!"
+	
+	def printBark():
+		print("Woof! Woof!")
+	
+	def sit():
+		sitted = True
+	
+	def sleep():
+		asleep = True
+	
+	def wakeUp():
+		asleep = False
+	
+	def stand():
+		sitted = False
+
+dog = Dog("Isabella")
+print(dog.asleep)
+</textarea>
+	Whoa! That must be a lot! Actually, that is a simple Dog() class. First, in the __init__() method we initialize the variable, with four values: name, yearsOld, sitted, asleep. Also the values it accept are self and name. Huh? What does self mean? self is the object in the scope. Also, self is accesible in the rest of the class, but we are creating it in the __init__() method so don't miss that one! Now, under the __init__() method there is the growOlder() method. The method just changes the value of a variable. Which variable? The yearsOld variable. The growOlder() method changes the variable called yearsOld, it says: <code>yearsOld = yearsOld + years</code> Which means yearsOld is equal to yearsOld plus what the parameter is, the variable is called years. Now, we will cover the method bark. The method bark() returns the string "Woof! Woof!". The method printBark() does something similar, but it prints the string to the screen instead of returning it. The method sit(), does something like growOlder(), but it turns the variable sitted to True. The method stand() turns the sitted variable to False. The method sleep() turns asleep to True and the wakeUp() method turns it to False. Now you know how to create classes! Try it out.</p>
+</div>
+<div id="overview"><h1><a href="#overview">Overview</a></h1>
+Now you can create classes, methods and even import packages! For more python tutorials try going to <a href="<%= tutorials_python_path %>">here</a>. Also don't forget to check the documentation!</div>
 </div>

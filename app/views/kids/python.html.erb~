@@ -1,0 +1,19 @@
+<h1>Python is fun!</h1>
+<h2>Learn python with me, we will dive to the world of python!</h2>
+<br>
+<div class="center">
+	<div id="intro">
+		<h1>Introduction</h1>
+		<p>Would you like to learn computer programming? Would you like to make awesome websites?<br>This is your place! Python is a programming language, with it you can make from awesome websites, to wi/fi router software, to desktop apps! So, what are you waiting for? Keep reading!</p>
+	</div>
+
+	<div id="gs">
+		<h1>Getting started</h1>
+		<p>So... If you use Linux, python is already installed. The difference, is that it's a <strong>Command Line Interface program (CLI)</strong>. We will learn about that later. If you use Windows, follow <a href="https://docs.python.org/3/using/windows.html">This guide</a> and if you have a mac, use <a href="">this</a>.</p>
+	</div>
+
+	<div id="firstapp">
+		<h1>Your first app!</h1>
+		<p>Hello again! This chapter needs python installed (see <a href="#gs">Getting Started</a>) so if you don't have installed it go install it now. The first thing you should know is that this app will work on the terminal. So for Windows, open cmd, for Linux, open the terminal or CTR + ALT + T. If you are in a Mac, open the Terminal app. On windows open the terminal by opening the cmd shell. see help <a href="here">here</a>. Now, in the terminal (linux, mac), write python3 and press Enter. In Windows CMD, write py and Enter. You will see a python window. In the >> write <code>print("Hello World")</code> and press enter. <br><h1>Congratulations! You just made your first program.</h1><br> 'print()' is a method. The print() prints content to the screen. The text is inside quotes (""). That means it's a string. A string can contain letters. A string is like a phrase or text. You can also print numbers or even boolean values like true and false. We will see this later.</p>
+	</div>
+</div>

@@ -16,10 +16,83 @@ As syntax is technicly defined by the language, the language is going to be <a h
 </p></div>
 <div id="firstwebsite"><h1>Your first website!</h1>
 <p>So... Let's start coding! To make a website, you just need a text editor! Any text editor would work, I recommend Sublime Text 3, and it is the editor I am using for this tutorial. If you use windows then open Notepad, not Word because Word is a RTF (Rich Text Format) editor and we need a TXT (Plain Text) editor. In mac, open TextEdit, and in Ubuntu Linux, use gedit. If you use other Linux distrobutions, just use your default text editor.</p>
-<p>Now, in your text editor, create a file and call it index.html <br> Then, in the part where you write, copy this text and paste it in the editor: <br><code>&lt;h1&gt;Hi world!&lt;/h1&gt;</code><br>Then, search for the file. In mac, open finder, in windows open the file explorer. In ubuntu linux open nautilus or your default file browser. double click the file. if you opened it right you should have something like this: <br><pre><div class="browser"><h1>Hi World!</h1></div></pre>Congratulations! You made your first website! Now, try adding <br><code>&lt;h2&gt;Small text&lt;/h2&gt;</code><br>And refresh the page: See the smaller text? It is because you added an <code>&lt;h2&gt;</code>!The H2 tag is smaller than the H1 tag! The tags define what the content would look like, and act like. The different tags you need to know right now are: <table><tr><th>Tag</th></tr><tr><td><h1>H1</h1></td></tr><tr><td><h2>H2</h2></td></tr><tr><td><h3>H3</h3></td></tr><tr><td><h4>H4</h4></td></tr><tr><td><h5>H5</h5></td></tr><tr><td><h6>H6</h6></td></tr></table><br>
+<p>Now, in your text editor, create a file and call it index.html <br> Then, in the part where you write, copy this text and paste it in the editor: <textarea>
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	
+</body>
+</html>
+
+</textarea> And in the &lt;body&gt;&lt;/body&gt; paste this code: <br><code>&lt;h1&gt;Hi world!&lt;/h1&gt;</code><br>Then, search for the file. In mac, open finder, in windows open the file explorer. In ubuntu linux open nautilus or your default file browser. double click the file. if you opened it right you should have something like this: <br><pre><div class="browser"><h1>Hi World!</h1></div></pre>Congratulations! You made your first website! Now, try adding <br><code>&lt;h2&gt;Small text&lt;/h2&gt;</code><br>And refresh the page: See the smaller text? It is because you added an <code>&lt;h2&gt;</code>!The H2 tag is smaller than the H1 tag! The tags define what the content would look like, and act like. The different tags you need to know right now are: <table><tr><th>Tag</th></tr><tr><td><h1>H1</h1></td></tr><tr><td><h2>H2</h2></td></tr><tr><td><h3>H3</h3></td></tr><tr><td><h4>H4</h4></td></tr><tr><td><h5>H5</h5></td></tr><tr><td><h6>H6</h6></td></tr></table><br>
 So, the tags go in <strong>lowercase</strong>, and, inside the tags!</p>
 <h1>Exercise: </h1>
 <p>Try doing the page below in code with the tags!</p>
 <pre><div class="browser"><h1>Hi!</h1><h2>This is my page</h2><h3>Check it out!</h3></div></pre></div>
 <p>You now know how to make header tags!</p>
+<p>You can make headers now!</p>
+<p>Keep reading to learn more.</p>
+<div id="paragraphs">
+	<h1>Paragraphs</h1>
+	<p>See this paragraph? It's made with code. the code for it is going to be covered below. Before you see the code, you have to understand the structure of it. &lt;p&gt;&lt;/p&gt; That is the structure!</p>
+	<h1>&lt;p&gt;&lt;/p&gt;</h1>
+	<p>Then, to add content you just add it <strong>&lt;p&gt;between the lines&lt;/p&gt;</strong>So, if you want to add content at a website the best way is with a paragraph.</p>
+
+	<h3>Now, how do you do a paragraph? Quiz time!</h3>
+	<h3>Choose the correct awnsers by writing down the number and then check the awnsers.</h3>
+	<h4>How do you write a paragraph with the text Content?</h4>
+	<h5>a) &lt;p/Content&gt;</h5>
+	<h5>b) &lt;p/Content/&gt;</h5>
+	<h5>c) &lt;p&gt;/Content/&lt;/p&gt;</h5>
+	<h5>d) &lt;p&gt;Content&lt;/p&gt;</h5>
+	<button onclick="showAwnsers('awnserp', 'The awnser is D.')">Check awnsers</button>
+	<h2 id="awnserp"></h2>
+	<script>
+		function showAwnsers(f, s) {
+			document.getElementById(f).innerHTML = s;
+		}
+
+		var code1 = "&lt;h1&gt;Welcome to my blog&lt;/h1&gt;&lt;p&gt;This is a paragraph.&lt;/p&gt;&lt;p&gt;This is other paragraph&lt;/p&gt;"
+	</script>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>Did you get the awnser right? It's like &lt;p&gt;Content&lt;/p&gt;</p>
+	<h3>Now, you know how to make a paragraph!</h3>
+	<h2>Are you ready to test your knowleadge? (Again)</h2>
+	<h2>Let's make a blog homepage!</h2>
+	<p>First, on your text editor, create a file and call it index.html <br>Then, in it, write: <br>
+		<pre><code>&lt;h1&gt;Welcome to my blog!&lt;/h1&gt;</code></pre></p>
+	<p>Then, open it on your browser. You should see something like this: </p>
+	 <br><pre><div class="browser"><h1>Welcome to my blog</h1></div></pre>
+	 <p>See? Now, lets make it have content!</p>
+	 <p>Try making this: </p>
+	 <br><pre><div class="browser"><h1>Welcome to my blog</h1><p>This is a paragraph.</p><p>This is other paragraph</p></div></pre>
+	 <p>Did you get it right?</p>
+	 <button onclick="showAwnsers('ga', code1)" >Get awnser</button>
+	 <h2 id="ga"></h2>
+	 <h1>Now, lets place a picture!</h1>
+	 <img src="https://i.ytimg.com/vi/Bor5lkRyeGo/hqdefault.jpg" alt="">
+   <p>So... you would say that this one is not a tag. That is because it does <strong>NOT</strong> need to be closed. Instead, it's a self-closing tag. Self-closing tags do not need to be closed but they carry important data. To place an image you should insert the path to the image in the src attribute. Today I will show you how to use html tags to place images in your website. So, the first thing you need to do is get your html document ready. First, you have to write a tag, but this tag is a little different. It looks like this: &lt;img src="" &gt; <br> In the src you have to enter the url of the image. The url must end like .png or .jpg or it must be a file on your computer. If it is, then it must be next to the index.html file. The file must be in the same folder. An example is &lt;img src="image.jpg"&gt; Go to google images and look for an image. Right-click it and copy the image link. And then replace the image.jpg with the link on your clipboard.</p>
+   <h1>Remember that all the code you write must go between the body tags!</h1>
+   <h1>Now I'll explain what the body and head tags mean.</h1>
+   <p>The head tag is were the information for the browsers go. So, if we want to tell the browser the title of the page, you do it on the head. The title of the page looks like this: <textarea><title>Insert title here</title></textarea> That should be inside the head tag. The body tag is all the content that is shown to the user has to be placed. You should notice all the code we have done have been inside the body tags. That's because it must be shown to the user. But title is NOT the only thing you can add to the head of the document! You can also add the <textarea style="display: inline;"><meta charset=“utf-8”></textarea> To show special characters like emojis or accents or chinese characters! To show the tag characters you use a backslash (\\). For including styles (CSS, the styling language) You use a <textarea><link rel="stylesheet" href="path/to/file"></textarea>. To add javascript, add a <textarea><script src=""></script></textarea> And that's it! you can now make a basic website! Now I will leave a basic code for a website so you can examine it and learn from it. If you want to learn more about HTML checkout the tutorial version. <br> <textarea name="" id="" cols="30" rows="10"><!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1>Hello! This is my very simple webpage and this is a header!</h1>
+	<p>Simple, Simple, Simple content! THis is a paragraph.</p>
+	<h2>H2 tag here!</h2>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+	<a href="https://google.com">Link to google</a>
+</body>
+</html></textarea></p>
+</div>
 </div>
