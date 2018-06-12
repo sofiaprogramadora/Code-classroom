@@ -1,3 +1,5 @@
+
+
 <div class="center">
 	<h1>Ruby, the friendly programming language</h1>
 	<p>Ruby was designed to make programmers happy! Dive with me into the basics of ruby.</p>
@@ -28,6 +30,51 @@
 					  <strong>Danger!</strong>There is very dangerous code you should never run. Only input your password when I tell you to.
 					</div>
 					Ok, with that in mind, let's start coding! First, open your text editor (article on text editors <a href="#">here</a>), and type: <code>puts "Hello World"</code> Now save it. If you use an operative system (article on them <a href="#">here</a>) called Linux, maybe you heard of it like Ubuntu, Debian, or Linux mint, open the apps section, on ubuntu it is called dash, and search for terminal.
+					On mac, open spotlight, and search for the terminal. On windows, open cmd. I recommend you that if you use windows you use <a href="https://rubyinstaller.org/">https://rubyinstaller.org/</a> I personally haven't used it yet because I use ubuntu on my computer when I code, but it is a way to install ruby on windows. Anyway, save the file somewhere you remember with the name <code>helloworld.rb</code>, don't forget the .rb ending. It's really important! Then, in the terminal window write <code>ruby helloworld.rb</code> then press return or enter. See how the text was printed? But wait... Where are the double quotes!!! Well, they meant that the text
+					between them are text, so they aren't showed. But, what if we actually wanted to have quotes in the text? That is where escape characters come in. Escape characters are characters we use to write characters like quotes, double quotes or backslashes (\). You can also do that with new blank lines. To do so, you should write \ before the character. For example, if we want to print <code>"Hello World"</code>. <code>puts "\"Hello World\""</code>. Save that in the file, and run it again,
+					do you see the quotes. Let's see what else we can put in those escape characters! Let's print <strong>"/\'Hello'\/"</strong>. To do this you have to scape this symbols. What do you think it is going to be? I will give you some options:
+					<h5>a) <code>puts "/\'Hello'\/"</code></h5>
+					<h5>b) <code>puts "/\\'Hello'\\/"</code></h5>
+					<h5>c) <code>puts "\"/\\'Hello'\\/\""</code></h5>
+					<h5>d) <code>puts \"\"/\\'Hello'\\/\"\"</code></h5>
+					<button onclick="showAwnsers('awnserp', 'The awnser is C.')">Check awnsers</button>
+					<h2 id="awnserp"></h2>
+					Did you get it right? we are breaking it down now.<br>
+					First, the puts <strong>method</strong>, it is printing something.
+					Remember you always have to write a \ before the symbols.
+					So, first, we have: <code>puts ""</code>.
+					Then, we have the Hello. <code>puts "Hello"</code>
+					Finally, we can add the backslashes to escape the characters! Let's see how:
+					<code>puts "\"Hello\""</code>
+					Run that code, and see how the Hello is printed between double quotes!
+					Let's get some more code on it to print the whole thing.
+					<code>puts "\"/Hello/\""</code>
+					 Now, try to write your name! Now we will learn how to print our names... 10 times! Let's continue.<br>
+					We know that we have to write our name between quotes, but why? We need to write text between quotes because they are <strong>strings</strong>. Strings are <strong>Objects</strong>
+					which means they are a type of "thing". Ruby is an Object Oriented Programming language (OOP), so types of objects
+					are very important. Different types of objects have different methods, and while we can multiply
+					numbers, if we use the multiplying method (*) on a string, then we can repeat a string multiple times! Let's see,
+					 we could write <code>puts "Ruby".*(4)</code> and recieve "RubyRubyRubyRuby", but there is a shorcut we
+					can use to multiply objects like strings or numbers, for strings we could do this: <code>puts "Ruby" * 4</code>
+					and we would print "RubyRubyRubyRuby", but what if we actually wanted to print a multiplication
+					 with numbers we would write like this: <code>puts 3 * 9</code> without any quotes. That would return
+					 the result of 3 * 9, which is 27. Did you notice how we used * to multiply? Also, remember that not all
+					 objects can use the * <strong>method</strong>. Did you notice we are writing methods inside methods?
+					 It's like writing <code>method(object.method(secondObject))</code>, but the second method is a little
+					 different. We learned that methods like puts could be written like <code>method()</code>, but as
+					 we learned before, everything (except methods) is an object, and objects can have methods too. So, when we do <code>object.method()</code>
+					  we are actually applying the method on the object that goes before it. When we use puts we
+					write the text or value to print as a parameter, but when we use methods like math operators,
+					the object recieves an operation, in this case with the 
 				</p>
 			</div>
 </div>
+
+
+<script>
+	function showAwnsers(f, s) {
+		document.getElementById(f).innerHTML = s;
+	}
+
+	var code1 = "puts \"\\\"Hello World\\\"\""
+</script>
